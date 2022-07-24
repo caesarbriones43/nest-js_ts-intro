@@ -2,8 +2,8 @@ import "./style.css";
 // import typescriptLogo from "./typescript.svg";
 // import { setupCounter } from "./counter";
 // import { pokemonIds, bulbasaur } from "./bases/02-objects";
+// import { name, age } from "./bases/01-types";
 
-import { name, age } from "./bases/01-types";
 import { mew } from "./bases/03-classes";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
