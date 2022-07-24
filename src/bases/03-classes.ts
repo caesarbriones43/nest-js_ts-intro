@@ -2,6 +2,8 @@
 //   public id: number;
 //   public name: string;
 
+import axios from "axios";
+
 //   constructor(id: number, name: string) {
 //     this.id = id;
 //     this.name = name;
@@ -25,6 +27,12 @@ export class Pokemon {
   public speak() {
     console.log(`${this.name},${this.name}...`);
   }
+
+  async getMoves() {
+    const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/4");
+    console.log(data.moves);
+    return data.moves;
+  }
 }
 
 export const mew = new Pokemon(151, "Mew");
@@ -35,3 +43,5 @@ mew.scream();
 mew.speak();
 
 // mew.name = "Mew";s
+
+mew.getMoves();
