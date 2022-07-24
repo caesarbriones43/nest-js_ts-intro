@@ -8,8 +8,6 @@ import { pokemonIds, bulbasaur } from "./bases/02-objects";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <h1>Hello ${name} i'm ${age} years old</h1>
-    <p>${pokemonIds.join(",")}</p>
-    <p>${bulbasaur.name}</p>
   </div>
 `;
 

@@ -21,4 +21,15 @@ export const charmander: Pokemon = {
   age: 15,
 };
 
-console.log(bulbasaur);
+export const pikachu: Pokemon = {
+  id: 15,
+  name: "Pikachu",
+};
+
+// console.log(bulbasaur);
+
+export const pokemons: Pokemon[] = [];
+
+pokemons.push(charmander, bulbasaur, pikachu);
+
+console.log(pokemons);
