@@ -5,10 +5,12 @@ import "./style.css";
 // import { name, age } from "./bases/01-types";
 
 import { mew } from "./bases/04-injection";
+import { charmander } from './bases/05-decorators';
+
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
-    <h1>Pokemon #${mew.id}:${mew.name}</h1>
+    <h1>Pokemon #${charmander.id}:${charmander.name}</h1>
   </div>
 `;
 
