@@ -4,7 +4,7 @@ import "./style.css";
 // import { pokemonIds, bulbasaur } from "./bases/02-objects";
 // import { name, age } from "./bases/01-types";
 
-import { mew } from "./bases/03-classes";
+import { mew } from "./bases/04-injection";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>

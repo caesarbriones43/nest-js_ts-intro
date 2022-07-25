@@ -3,7 +3,7 @@
 //   public name: string;
 
 // import axios from "axios";
-import { PokeApiAdapter, PokeApiFetchAdapter } from "../api/pokeApi.adapter";
+import { PokeApiAdapter, PokeApiFetchAdapter, HttpAdapter } from '../api/pokeApi.adapter';
 import {
   Move,
   PokeapiResponse,
@@ -26,7 +26,7 @@ export class Pokemon {
   constructor(
     public readonly id: number,
     public name: string,
-    private readonly http: PokeApiAdapter
+    private readonly http: HttpAdapter
   ) {
     //TODO: injection dependecies
   }
