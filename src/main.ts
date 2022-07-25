@@ -3,9 +3,9 @@ import "./style.css";
 // import { setupCounter } from "./counter";
 // import { pokemonIds, bulbasaur } from "./bases/02-objects";
 // import { name, age } from "./bases/01-types";
+// import { mew } from "./bases/04-injection";
 
-import { mew } from "./bases/04-injection";
-import { charmander } from './bases/05-decorators';
+import { charmander } from './bases/06-decorators2';
 
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
