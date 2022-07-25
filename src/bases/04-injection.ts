@@ -3,7 +3,7 @@
 //   public name: string;
 
 // import axios from "axios";
-import { PokeApiAdapter } from "../api/pokeApi.adapter";
+import { PokeApiAdapter, PokeApiFetchAdapter } from "../api/pokeApi.adapter";
 import {
   Move,
   PokeapiResponse,
@@ -43,15 +43,16 @@ export class Pokemon {
     // const { data } = await axios.get<PokeapiResponse>(
     //   "https://pokeapi.co/api/v2/pokemon/4"
     // );
-    const data = await this.http.get("https://pokeapi.co/api/v2/pokemon/4");
+    const data = await this.http.get<PokeapiResponse>("https://pokeapi.co/api/v2/pokemon/4");
     console.log(data.moves);
-    return data;
+    return data.moves;
   }
 }
 
-const pokeApi = new PokeApiAdapter();
+const pokeApiAxios = new PokeApiAdapter();
+const pokeApiFetch = new PokeApiFetchAdapter();
 
-export const mew = new Pokemon(151, "Mew", pokeApi);
+export const mew = new Pokemon(151, "Mew", pokeApiAxios);
 
 console.log(mew);
 
